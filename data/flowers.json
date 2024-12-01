@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Rose",
+    "description": "A beautiful red rose.",
+    "price": 50,
+    "image": "images/rose.jpg",
+    "_id": "6749c0da5b2399e0aa672aeb"
+  },
+  {
+    "name": "Tulip",
+    "description": "A vibrant yellow tulip.",
+    "price": 70,
+    "image": "images/tulip.jpg",
+    "_id": "6749c0da5b2399e0aa672aec"
+  },
+  {
+    "name": "Sunflower",
+    "description": "A bright sunflower to brighten your day.",
+    "price": 120,
+    "image": "images/sunflower.jpg",
+    "_id": "6749c0da5b2399e0aa672aed"
+  },
+  {
+    "name": "Orchid",
+    "description": "A delicate and elegant flower.",
+    "price": 150,
+    "image": "images/orchid.jpg",
+    "_id": "6749c0da5b2399e0aa672aee"
+  },
+  {
+    "name": "Daisy",
+    "description": "A cheerful white flower with a yellow center.",
+    "price": 80,
+    "image": "images/daisy.jpg",
+    "_id": "6749c0da5b2399e0aa672aef"
+  },
+  {
+    "name": "Lily",
+    "description": "A fragrant flower that symbolizes purity.",
+    "price": 200,
+    "image": "images/lily.jpg",
+    "_id": "6749c0da5b2399e0aa672af0"
+  }
+]

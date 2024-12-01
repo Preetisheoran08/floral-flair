@@ -1,0 +1,21 @@
+[
+    {
+      "name": "Orchid",
+      "description": "A delicate and elegant flower.",
+      "price": 15,
+      "image": "images/orchid.jpg"
+    },
+    {
+      "name": "Daisy",
+      "description": "A cheerful white flower with a yellow center.",
+      "price": 7,
+      "image": "images/daisy.jpg"
+    },
+    {
+      "name": "Lily",
+      "description": "A fragrant flower that symbolizes purity.",
+      "price": 12,
+      "image": "images/lily.jpg"
+    }
+  ]
+  

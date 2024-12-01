@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #6f4f37;
+    }
+    .review-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .review-item {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+      padding: 15px;
+      transition: transform 0.2s ease;
+    }
+    .review-item:hover {
+      transform: translateY(-5px);
+    }
+    .review-item strong {
+      font-size: 1.2em;
+      color: #333;
+    }
+    .review-item p {
+      font-size: 1em;
+      color: #555;
+      margin: 10px 0;
+    }
+    .review-item small {
+      display: block;
+      font-size: 0.9em;
+      color: #888;
+    }
+    .review-item button {
+      background-color: #e63946;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .review-item button:hover {
+      background-color: #d62828;
+    }
+    .add-review {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      background-color: #70c570;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+    .add-review:hover {
+      background-color: #70c570;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Customer Reviews</h1>
+    <a href="/reviews/new" class="add-review">Add a New Review</a>
+
+    {{#if reviews}}
+      <ul class="review-list">
+        {{#each reviews}}
+          <li class="review-item">
+            <strong>{{this.name}}</strong> ({{this.rating}}/5)
+            <p>{{this.comment}}</p>
+            <small>Posted on {{this.createdAt}}</small>
+            <form action="/reviews/delete/{{this._id}}" method="POST" style="display: inline;">
+              <button type="submit">Delete</button>
+            </form>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>No reviews yet!</p>
+    {{/if}}
+  </div>
+</body>
+</html>

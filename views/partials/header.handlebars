@@ -1,0 +1,19 @@
+
+<header>
+  <h1>Flower Shop</h1>
+  <nav>
+  <a href="/">Home</a>
+  <a href="/flowers">Flowers</a>
+  <a href="/cart">Cart</a>
+  <a href="/reviews">Reviews</a>
+  <a href="/about">About Us</a>
+  <a href="/contact">Contact Us</a>
+  {{#if loggedIn}}
+    <a href="/logout">Logout</a>
+  {{else}}
+    <a href="/users/login">Login</a>
+    <a href="/users/signup">Sign Up</a>
+  {{/if}}
+</nav>
+
+</header>

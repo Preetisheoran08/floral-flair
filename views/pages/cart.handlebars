@@ -1,0 +1,30 @@
+<!-- pages/cart.handlebars -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Cart</h1>
+    {{#if cartItems}}
+      <div class="cart-items">
+        {{#each cartItems}}
+          <div class="cart-item">
+            <img src="{{this.image}}" alt="{{this.name}}" class="flower-image">
+            <h3>{{this.name}}</h3>
+            <p class="price">${{this.price}}</p>
+            <p>Quantity: {{this.quantity}}</p>
+          </div>
+        {{/each}}
+      </div>
+    {{else}}
+      <p>Your cart is empty.</p>
+    {{/if}}
+    <a href="/checkout" class="checkout-button">Proceed to Checkout</a>
+  </div>
+</body>
+</html>

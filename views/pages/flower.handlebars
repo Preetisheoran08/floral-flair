@@ -1,0 +1,327 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+    }
+
+    .flower-detail {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .flower-detail img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .flower-detail h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    .flower-detail p {
+      font-size: 1.2rem;
+      margin: 15px 0;
+      color: #555;
+    }
+
+    .flower-detail .price {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #4CAF50;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007BFF;
+      font-size: 1rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="flower-detail">
+    <img src="/{{flower.image}}" alt="{{flower.name}}">
+    <h1>{{flower.name}}</h1>
+    <p>{{flower.description}}</p>
+    <p class="price">Price: ${{flower.price}}</p>
+    <a href="/flowers" class="back-link">Back to All Flowers</a>
+  </div>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} - {{flower.name}}</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/zooming/1.5.0/zooming.min.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .product-page {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .product-image-container {
+      max-width: 500px;
+      position: relative;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .product-image:hover {
+      transform: scale(1.1);
+    }
+
+    .product-info {
+      max-width: 600px;
+    }
+
+    .product-info h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .product-info .price {
+      font-size: 1.5rem;
+      color: #4CAF50;
+      margin: 10px 0;
+    }
+
+    .product-info .description {
+      font-size: 1rem;
+      margin: 10px 0;
+      color: #555;
+    }
+
+    /* Additional Information */
+    .additional-info {
+      margin-top: 30px;
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    .categories,
+    .shipping-info,
+    .guarantee-info,
+    .payment-methods {
+      margin-bottom: 20px;
+    }
+
+    .categories span,
+    .shipping-info span,
+    .guarantee-info span {
+      font-weight: bold;
+    }
+
+    /* Quantity and Add to Cart */
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+
+    .quantity-selector label {
+      font-size: 1.1rem;
+      margin-right: 10px;
+    }
+
+    .quantity-selector input {
+      width: 50px;
+      padding: 5px;
+      text-align: center;
+      font-size: 1.1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .add-to-cart-btn {
+      background-color: #4CAF50;
+      color: white;
+      font-size: 1.2rem;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* Related Products */
+    .related-products {
+      margin-top: 50px;
+    }
+
+    .related-products h2 {
+      font-size: 1.75rem;
+      margin-bottom: 20px;
+    }
+
+    .related-products .flower-card {
+      display: inline-block;
+      width: 200px;
+      margin-right: 20px;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .related-products .flower-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .related-products .flower-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .related-products .flower-card h3 {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .related-products .flower-card p {
+      font-size: 1rem;
+      color: #4CAF50;
+    }
+
+    /* Payment Methods Section */
+    .payment-methods img {
+      width: 50px;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="product-page">
+      <div class="product-image-container">
+        <img 
+          src="/{{flower.image}}" 
+          alt="{{flower.name}}"
+          class="product-image zooming"
+          data-zoom-image="/{{flower.image}}" 
+        >
+      </div>
+      <div class="product-info">
+        <h1>{{flower.name}}</h1>
+        <p class="description">{{flower.description}}</p>
+        <p class="price">₹{{flower.price}}</p>
+        
+        <form action="/cart/add" method="POST">
+          <div class="quantity-selector">
+            <label for="quantity">Quantity:</label>
+            <input 
+              type="number" 
+              id="quantity" 
+              name="quantity" 
+              value="1" 
+              min="1" 
+              max="10"
+            >
+          </div>
+
+          <input type="hidden" name="flowerId" value="{{flower._id}}">
+
+          <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+        </form>
+
+        <!-- Additional Info -->
+        <div class="additional-info">
+          <div class="shipping-info">
+            <span>Free Shipping</span> on orders over ₹1,999!
+          </div>
+          <div class="guarantee-info">
+            <span>✔ No-Risk Money Back Guarantee!</span><br>
+            ✔ No Hassle Refunds<br>
+            ✔ Secure Payments
+          </div>
+
+          <!-- Payment Methods -->
+          <div class="payment-methods">
+            <img src="/images/visa.png" alt="Visa">
+            <img src="/images/mastercard.png" alt="MasterCard">
+            <img src="/images/amex.png" alt="PayPal">
+            <img src="/images/discover.png" alt="Indian Rupee">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products Section -->
+    <div class="related-products">
+      <h2>Related Flowers</h2>
+      <div class="flower-cards">
+        {{#each relatedFlowers}}
+          <div class="flower-card">
+            <img src="/{{this.image}}" alt="{{this.name}}">
+            <h3>{{this.name}}</h3>
+            <p>${{this.price}}</p>
+            <a href="/flowers/{{this._id}}">View</a>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/1.5.0/zooming.min.js"></script>
+  <script>
+    new Zooming().listen('.zooming');
+  </script>
+</body>
+</html>

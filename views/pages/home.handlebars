@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>{{title}}</title>
+  <style>
+    /* Reset Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1, h2, h3, h4 {
+      color: #333;
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* Hero Section Styling */
+    .hero-section {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #f8d0c1;
+      background-image: url('images/home1.jpg'); /* Optional: Update with your image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .hero-section h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero-section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-section .shop-now-btn {
+      font-size: 1.25rem;
+      padding: 10px 20px;
+      background-color: rgb(244, 96, 96);
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .hero-section .shop-now-btn:hover {
+      background-color: rgb(244, 96, 96);
+    }
+
+    /* Feature Section */
+    .features {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 30px 20px;
+      background-color: #fff;
+    }
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+      width: 200px;
+      text-align: center;
+    }
+
+    .feature-item i {
+      font-size: 2rem;
+      color: #ff8c00;
+      margin-bottom: 10px;
+    }
+
+    .feature-item p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Flower Section */
+    .flower-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .flower-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      max-width: 300px;
+      background-color: white;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .flower-card:hover {
+      transform: scale(1.05);
+    }
+
+    .flower-card img {
+      width: 100%;
+      max-width: 250px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .flower-card h2 {
+      font-size: 1.25rem;
+      margin: 10px 0;
+    }
+
+    .flower-card p {
+      font-size: 1rem;
+      margin: 5px 0;
+    }
+
+    /* Special Offer Section */
+    .special-offer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 20px;
+      background-color: rgb(244, 96, 96);
+      color: white;
+      text-align: center;
+    }
+
+    .special-offer img {
+      width: 400px;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .special-offer h2, .special-offer h1 {
+      margin-bottom: 10px;
+    }
+
+    .special-offer .shop-btn {
+      padding: 10px 20px;
+      background-color: white;
+      color: rgb(244, 96, 96);
+      font-size: 1.2rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .special-offer .shop-btn:hover {
+      background-color: #ffcc80;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+      padding: 40px 20px;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .testimonial {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .testimonial div {
+      width: 250px;
+      text-align: center;
+    }
+
+    .testimonial img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    /* CTA Section */
+    .cta-container {
+      padding: 50px 20px;
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+
+    .cta-container img {
+      width: 100%;
+      max-width: 600px;
+      margin-bottom: 20px;
+    }
+
+    .cta-container h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .cta-container p {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .cta-container a {
+      padding: 15px 30px;
+      background-color: rgb(244, 96, 96);
+      color: white;
+      font-size: 1.25rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .cta-container a:hover {
+      background-color: #e67e00;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .hero-section h2 {
+        font-size: 1.2rem;
+      }
+
+      .feature-item {
+        width: 150px;
+      }
+
+      .flower-card {
+        max-width: 250px;
+      }
+
+      .special-offer img {
+        width: 300px;
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .cta-container {
+        padding: 30px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <!-- Hero Section -->
+    <div class="hero-section">
+      <h1 style="color: white;">WELCOME TO FLORALFLAIR</h1>
+      <h2 style="color: white;">Let’s Make Beautiful Flowers a Part of Your Life</h2>
+      <a href="/flowers"><button class="shop-now-btn"><b>SHOP NOW</b></button></a>
+    </div>
+  </header>
+
+
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="feature-item">
+      <i class="bi bi-phone-vibrate"></i>
+      <p>Order Online</p>
+    </div>
+    <div class="feature-item">
+      <i class="bi bi-truck"></i>
+      <p>Free Shipping</p>
+    </div>
+    <div class="feature-item">
+      <i class="bi bi-percent"></i>
+      <p>Big Discounts</p>
+    </div>
+    <div class="feature-item">
+      <i class="bi bi-wallet2"></i>
+      <p>Safe Payment</p>
+    </div>
+  </section>
+
+  <!-- Flowers Section -->
+  <section id="flowers">
+    <h2 style="text-align: center;">Our Featured Flowers</h2>
+    {{#if flowers.length}}
+    <div class="flower-container">
+      {{#each flowers}}
+        <div class="flower-card">
+          <img src="/{{this.image}}" alt="{{this.name}}">
+          <h2>{{this.name}}</h2>
+          <p><strong>Description:</strong> {{this.description}}</p>
+          <p><strong>Price:</strong> ${{this.price}}</p>
+        </div>
+      {{/each}}
+    </div>
+    {{else}}
+      <p>No flowers available at the moment.</p>
+    {{/if}}
+  </section>
+
+  <!-- Special Offer Section -->
+  <section class="special-offer">
+    <div>
+      <h2>SPECIAL OFFER</h2>
+      <h1>Your Floral Journey Begins Here: Get 20% Off Your First Order!</h1>
+      <a href="/flowers" class="shop-btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>TESTIMONIAL</h2>
+    <h1>Hear From Our Happy Customers !!</h1><br>
+    <div class="testimonial">
+      <div>
+        <p><b>I've been a loyal customer of FloralFlair for years, and they never cease to amaze me. The flowers are always fresh, the arrangements are stunning, and the service is top-notch.</b></p>
+        <img src="images/home3.jpg" alt="Riya Kapoor">
+        <h4>Riya Kapoor</h4>
+        <span>Wedding Planner</span>
+      </div>
+      <div>
+        <p><b>I've always admired FloralFlair for the quality they provide, and they always find ways to amaze me. The flowers, arrangements, the service... all are always out of this world.</b></p>
+        <img src="images/home4.jpg" alt="Nishika Garg">
+        <h4>Nishika Garg</h4>
+        <span>Designer</span>
+      </div>
+      <div>
+        <p><b>I recently used FloralFlair for my daughter's wedding, and I couldn't have been happier with the results. The wedding florals were breathtaking, and the team went above and beyond to bring perfection.</b></p>
+        <img src="images/home5.jpg" alt="Ved Kundra">
+        <h4>Ved Kundra</h4>
+        <span>Business Owner</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <div class="cta-container">
+    <img src="images/home2.jpg" alt="Floral Shop">
+    <h3>CALL TO ACTION</h3>
+    <p>Explore Our Exquisite Floral Collections & Shop Now for the Perfect Blooms</p>
+    <a href="/flowers">Shop Now</a>
+  </div>
+
+</body>
+</html>
+

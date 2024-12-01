@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About Us - FloralFlair</title>
+    <link rel="shortcut icon" href="images/img2.jpg" type="image/x-icon">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #222;
+        }
+        ul {
+            list-style: none;
+        }
+        section {
+            width: 100%;
+        }
+        .container {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('images/img3.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* About Section */
+        .about-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            background-color: #fdf5f5;
+        }
+        .about-text {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .about-images {
+            display: flex;
+            gap: 20px;
+        }
+        .about-images img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Story Section */
+        .story-section {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .story-section img {
+            max-width: 300px;
+            margin-top: 20px;
+            border-radius: 15px;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+
+        /* Stats Section */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f9f9f9;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .stats div {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .stats div span {
+            font-size: 32px;
+            display: block;
+            color: #ff4c4c;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .team-members {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .team-member {
+            text-align: center;
+        }
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Call to Action Section */
+        .cta-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            background-color: #fef0f0;
+        }
+        .cta-image img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #ff4c4c;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #d00000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1 style="color: white;">Embarking on the Path to Our Dreams</h1>
+            <p>Every great journey begins with a single step. With passion, creativity, and determination, we bring joy through flowers.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-text">
+            <h2>About Us</h2>
+            <p>At FloralFlair, we believe in the power of nature's beauty to transform spaces and elevate moods. From a small passion to a vibrant community, we are dedicated to spreading joy with floral artistry.</p>
+        </div>
+        <div class="about-images">
+            <img src="images/about1.png" alt="Flower Arrangement">
+            <img src="images/about2.png" alt="Floral Design">
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <h2 style="color: red;">Our Story</h2>
+        <p>Starting as a small local florist, we've blossomed into a thriving business, creating stunning arrangements for every occasion.</p>
+        <img src="images/about3.png" alt="Our Journey">
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div>
+            <span>10+</span> Years in Business
+        </div>
+        <div>
+            <span>1000+</span> Happy Customers
+        </div>
+        <div>
+            <span>500+</span> Unique Arrangements
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+            <div class="team-member">
+                <img src="images/preeti.jpg" alt="Founder">
+                <h3>Preeti</h3>
+                <span>Founder</span>
+            </div>
+            <div class="team-member">
+                <img src="images/shivani.png" alt="Co-Founder">
+                <h3>Shivani</h3>
+                <span>Co-Founder</span>
+            </div>
+            <div class="team-member">
+                <img src="images/keerti.png" alt="Designer">
+                <h3>Keerti</h3>
+                <span>Designer</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-text">
+            <h2>Let’s Bring Nature to Your Home</h2>
+            <p>Explore our wide collection of floral arrangements to brighten up your space.</p>
+            <a href="/flowers" class="cta-button">Shop Now</a>
+        </div>
+        <div class="cta-image">
+            <img src="images/img8.jpg" alt="CTA Image">
+        </div>
+    </section>
+
+</body>
+</html>
